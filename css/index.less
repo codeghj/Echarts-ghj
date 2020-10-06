@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+
+    background: url('../image/bg.jpg') no-repeat top center ;
+    background-size: 100% 100%;
+    line-height: 1.15;
+}
+header{
+    position: relative;
+    width: 100%;
+    height: 1.25rem;
+    background: url('../image/head_bg.png') no-repeat top center;
+    background-size: 100% 100%;
+    h1{
+        line-height: 1.25rem;
+        text-align: center;
+        color: #fff;
+    }
+    .showTime{
+        position: absolute;
+        right: 0;
+        top: 0.25rem;
+        color: #fff;
+        margin-right: 0.25rem;
+    }
+}
+@font-face {
+    font-family: electronicFont;
+    src: url(../font/DS-DIGIT.TTF);
+  }
+.mainbox{
+    padding: 0.125rem 0.125rem 0;
+    display: flex;
+   .left-main-box{
+     flex: 3; 
+
+    
+   }
+   .right-main-box{
+    flex: 3; 
+    
+  }
+  .center-main-box{
+    flex: 5; 
+    overflow: hidden;
+    .no{
+      background-color:  rgba(101, 132, 226, 0.1);
+      height: 2rem;
+      padding: 0.1875rem;
+      margin: 0 0.125rem 0.1875rem;
+      .no-hd{
+       height: 1rem;
+       border: 1px solid rgba(25, 186, 139, 0.17);
+       position: relative;
+       ul{
+           display: flex;
+           text-align: center;
+           li{
+            flex: 1;
+            color: #ffeb7b;
+            height: 1rem;
+            font-size: 0.875rem;
+            font-family: electronicFont;
+            position: relative;
+            &:first-child::after {
+                content: '';
+                position: absolute;
+                height: 50%;
+                width: 1px;
+                background: rgba(255, 255, 255, 0.2);
+                right: 0;
+                top: 25%;
+            }
+             
+         }
+          
+       }
+       
+
+       }
+       .no-bd{
+           ul{
+               display: flex;
+               li{
+                   flex: 1;
+                   color: white;
+                   height: 0.5rem;
+                   font-size: 18px;
+                   line-height: 0.5rem;
+                   text-align: center;
+                   padding-top: 0.125rem;
+               }
+           }
+       }
+       &::before{
+           position: absolute;
+           content: '';
+           width: 0.25rem;
+           height: 0.125rem;
+           top: 0;
+           left: 0;
+           border-left: 2px solid #02a6b5;
+           border-top: 2px solid #02a6b5;;
+       }
+       &::after{
+        position: absolute;
+        content: '';
+        width: 0.25rem;
+        height: 0.125rem;
+        top: 0;
+        right: 0;
+        border-right: 2px solid #02a6b5;
+        border-top: 2px solid #02a6b5;;
+       }
+      }
+      .map{
+          width: 100%;
+          height: 10rem;
+          position: relative;
+        .map1{
+            background: url(../image/map.png) no-repeat center top;
+            width: 6.475rem;
+            height: 6.475rem;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0.3;
+        }
+        .map2{
+            background: url(../image/lbx.png) no-repeat center top;
+            width: 8.0375rem;
+            height: 8.0375rem;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0.6;
+            animation: animationmap2 10s linear infinite;
+        }
+        .map3{
+            background: url(../image/jt.png) no-repeat center top;
+            width:7.075rem;
+            height: 7.075rem;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation: animationmap3 10s linear infinite;
+        }
+        .chinaMap{
+          width: 100%;
+          height: 100%;
+          // position: absolute;
+          // top: 50%;
+          // left: 50%;
+          // transform: translate(-50%,-50%);
+        }
+          @keyframes animationmap2 {
+              form{
+            transform: translate(-50%,-50%) rotate(0deg) ;
+              }
+              to{
+           transform: translate(-50%,-50%) rotate(360deg);
+              }
+          }
+          @keyframes animationmap3 {
+            form{
+          transform: translate(-50%,-50%) rotate(0deg) ;
+            }
+            to{
+         transform: translate(-50%,-50%) rotate(-360deg);
+            }
+        }
+      }
+    } 
+   
+  
+  .column{
+      position: relative;
+      height: 3.875rem;
+      width: 100%;
+      background: url(../image/line\(1\).png) no-repeat center;
+      background-size: 100% 100%;
+      padding: 0 0.1875rem 0.5rem;
+      margin-bottom: 0.1875rem;
+      border: solid 0.0125rem rgba(25, 186, 139, 0.17) ;
+      &::before{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0.125rem;
+          height: 0.125rem;
+          content: '';
+          border-left: 2px solid #02a6b5;
+          border-top: 2px solid #02a6b5;
+      }
+      &::after{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0.125rem;
+        height: 0.125rem;
+        content: '';
+        border-right: 2px solid #02a6b5;
+        border-top: 2px solid #02a6b5;
+      }
+      h1{
+        color: white;
+        font-size: 0.1875rem;
+        font-style: none;
+        height: 0.625rem;
+        line-height: 0.625rem;
+        text-align: center;
+      }
+      .echarts{
+        width: 100%;
+        height: 3.125rem;
+      }
+      a{
+        margin-left: 0.25rem;
+        text-decoration: none;
+        color: white;
+      }
+      
+      .border-column{
+        width: 100%;
+        height: 0.125rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+       &::before{
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 0.125rem;
+           height: 0.125rem;
+           content: '';
+           border-left: 2px solid #02a6b5;
+           border-bottom: 2px solid #02a6b5;
+       }
+       &::after{
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 0.125rem;
+         height: 0.125rem;
+         content: '';
+         border-right: 2px solid #02a6b5;
+         border-bottom: 2px solid #02a6b5;
+       }
+     }
+     
+    }
+  }
+    
+    
+   
+  
+
+  
